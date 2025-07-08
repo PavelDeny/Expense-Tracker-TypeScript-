@@ -1,0 +1,86 @@
+/*
+  style.css — файл для пользовательских стилей приложения Expense Tracker
+  Здесь можно описывать оформление элементов интерфейса
+*/
+
+/* Пример базового стиля для контейнера */
+#app {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body {
+   font-family: sans-serif;
+   background-color: #f8fafc;
+   margin: 0;
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+}
+
+.container {
+   width: 100%;
+   max-width: 500px;
+   background: white;
+   padding: 2rem;
+   border-radius: 12px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+   margin-bottom: 1rem;
+   font-size: 1.8rem;
+   text-align: center;
+}
+
+form {
+   display: flex;
+   gap: 0.5rem;
+   flex-wrap: wrap;
+   margin-bottom: 1rem;
+}
+
+input,
+select,
+button {
+   flex: 1 1 45%;
+   padding: 0.5rem;
+   font-size: 1rem;
+}
+
+button {
+   background-color: #10b981;
+   color: white;
+   border: none;
+   cursor: pointer;
+   border-radius: 6px;
+   transition: 0.2s ease;
+}
+
+button:hover {
+   background-color: #059669;
+}
+
+#expense-list {
+   list-style: none;
+   padding: 0;
+   margin: 1rem 0;
+}
+
+#expense-list li {
+   background: #f1f5f9;
+   padding: 0.5rem;
+   border-radius: 6px;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 0.5rem;
+}
+
+#total {
+   font-weight: bold;
+   text-align: right;
+}

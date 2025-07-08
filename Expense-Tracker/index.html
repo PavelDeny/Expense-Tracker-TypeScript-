@@ -1,0 +1,40 @@
+<!--
+  index.html — основной HTML-файл приложения Expense Tracker
+  Здесь подключаются стили и основной скрипт приложения
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Expense Tracker</title>
+   <!-- Подключаем стили -->
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <div class="container">
+      <h1>💰 Expense Tracker</h1>
+
+      <form id="expense-form">
+         <input type="text" id="description" placeholder="Description" required />
+         <input type="number" id="amount" placeholder="Amount" required />
+         <select id="category">
+            <option value="food">🍔 Food</option>
+            <option value="transport">🚗 Transport</option>
+            <option value="entertainment">🎮 Entertainment</option>
+            <option value="other">📦 Other</option>
+         </select>
+         <button type="submit">Add</button>
+      </form>
+
+      <ul id="expense-list"></ul>
+
+      <div id="total">Total: $0</div>
+   </div>
+
+   <script src="app.js"></script>
+</body>
+
+</html>
