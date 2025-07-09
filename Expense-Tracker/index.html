@@ -17,6 +17,14 @@
    <div class="container">
       <h1>💰 Expense Tracker</h1>
 
+      <select id="filter">
+         <option value="all">All</option>
+         <option value="food">🍔 Food</option>
+         <option value="transport">🚗 Transport</option>
+         <option value="entertainment">🎮 Entertainment</option>
+         <option value="other">📦 Other</option>
+      </select>
+
       <form id="expense-form">
          <input type="text" id="description" placeholder="Description" required />
          <input type="number" id="amount" placeholder="Amount" required />

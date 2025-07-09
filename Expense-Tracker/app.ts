@@ -22,6 +22,7 @@ const amountInput = document.querySelector("#amount") as HTMLInputElement;
 const categorySelect = document.querySelector("#category") as HTMLSelectElement;
 const list = document.querySelector("#expense-list") as HTMLUListElement;
 const totalDisplay = document.querySelector("#total") as HTMLDivElement;
+const filterSelect = document.querySelector("#filter") as HTMLSelectElement;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -38,12 +39,21 @@ form.addEventListener("submit", (e) => {
   form.reset();
 });
 
+filterSelect.addEventListener("change", () => {
+  renderExpenses();
+});
+
 function renderExpenses() {
   list.innerHTML = "";
 
   let total = 0;
 
-  expenses.forEach((expense) => {
+  const filter = filterSelect.value;
+  const filteredExpenses = filter === "all"
+    ? expenses
+    : expenses.filter(e => e.category === filter);
+
+  filteredExpenses.forEach((expense) => {
     const li = document.createElement("li");
     li.innerText = `${expense.description} - $${expense.amount} [${expense.category}]`;
 
